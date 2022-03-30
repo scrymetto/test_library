@@ -1,0 +1,170 @@
+.menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+
+  > * {
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: gray;
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+}
+
+.menu__button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: red;
+  border: none;
+  z-index: 1000;
+  cursor: pointer;
+
+  &-inner {
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg {
+    fill: white;
+  }
+
+  .icon-open {
+    width: 16px;
+    height: 24px;
+  }
+
+  .icon-close {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.menu__inner {
+  font-family: sans-serif;
+  z-index: 99999;
+  width: 280px;
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  box-shadow: 5px 5px 25px gray;
+  border-radius: 10px;
+  background-color: white;
+
+  &-list {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 16px 24px 8px;
+  }
+
+  &-item {
+    display: flex;
+    padding: 9px 0;
+
+    svg {
+      width: 35px;
+      height: 30px;
+      fill: gray;
+      margin-right: 12px;
+    }
+
+    a {
+      text-decoration: none;
+      width: calc(100% - 34px);
+      color: black;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 150%;
+    }
+
+    &:last-child {
+      margin-bottom: 8px;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      a {
+        color: red;
+      }
+
+      svg {
+        fill: red;
+      }
+    }
+  }
+
+  &-another {
+    color: black;
+    border: none;
+    border-top: 1px solid gray;
+    background-color: white;
+    width: 100%;
+    margin-top: 8px;
+    padding: 17px 0 9px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 150%;
+
+    svg {
+      width: 35px;
+      height: 30px;
+      fill: gray;
+      margin-right: 12px;
+    }
+
+    &:hover {
+      color: red;
+
+      svg {
+        fill: red;
+      }
+    }
+  }
+
+  &-demo {
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+
+    span {
+      display: block;
+      font-size: 14px;
+      line-height: 20px;
+      user-select: none;
+      padding: 24px;
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: blue;
+      border-bottom: 1px solid blue;
+    }
+  }
+}
